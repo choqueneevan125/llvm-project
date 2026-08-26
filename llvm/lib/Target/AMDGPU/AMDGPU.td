@@ -3097,6 +3097,10 @@ def NotHasIEEEMinimumMaximumInsts : Predicate<"!Subtarget->hasIEEEMinimumMaximum
 def HasAnyPackedFP32Ops : Predicate<"Subtarget->hasAnyPackedFP32Ops()">,
   AssemblerPredicate<(any_of FeaturePackedFP32Ops, FeaturePackedFP32SingleSGPROps)>;
 
+def HasUnalignedDS2Bug : Predicate<"Subtarget->hasUnalignedDS2Bug()">;
+
+def NotHasUnalignedDS2Bug : Predicate<"!Subtarget->hasUnalignedDS2Bug()">;
+
 def HasAnyPackedFP64Ops : Predicate<"Subtarget->hasAnyPackedFP64Ops()">,
   AssemblerPredicate<(any_of FeaturePackedFP64SingleSGPROps)>;
 
